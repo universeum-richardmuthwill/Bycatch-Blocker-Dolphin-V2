@@ -1,9 +1,9 @@
 radio.onReceivedNumber(function (receivedNumber) {
     didntRecieveReply = 0
-    if (receivedNumber == 5 && radio.receivedPacket(RadioPacketProperty.SignalStrength) > -70) {
+    if (receivedNumber == 1 && radio.receivedPacket(RadioPacketProperty.SignalStrength) > -70) {
         music.play(music.stringPlayable("B F B F B F B F ", 120), music.PlaybackMode.InBackground)
         basic.showString("VARNING!")
-    } else if (receivedNumber == 5 && radio.receivedPacket(RadioPacketProperty.SignalStrength) <= -70) {
+    } else if (receivedNumber == 1 && radio.receivedPacket(RadioPacketProperty.SignalStrength) <= -70) {
         basic.showIcon(IconNames.Yes)
         music.play(music.builtinPlayableSoundEffect(soundExpression.twinkle), music.PlaybackMode.UntilDone)
     }
