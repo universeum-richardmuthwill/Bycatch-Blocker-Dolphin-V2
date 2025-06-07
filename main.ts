@@ -54,6 +54,8 @@ input.onButtonPressed(Button.A, function () {
         music.play(music.builtinPlayableSoundEffect(soundExpression.twinkle), music.PlaybackMode.UntilDone)
         didntRecieveReply = 0
     }
+    basic.pause(1000)
+    basic.clearScreen()
 })
 let didntRecieveReply = 0
 radio.setGroup(1)
